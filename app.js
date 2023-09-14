@@ -1,12 +1,14 @@
 var header = document.querySelector("header");
-
+if(window.innerWidth==375){
+    
+}
 window.addEventListener("scroll", function(){
     header.classList.toggle("sticky", window.scrollY > 0);
-})
+});
 //Animaciones pagina HOME
 let timeline = gsap.timeline();
 gsap.registerPlugin(ScrollTrigger);
-
+ScrollTrigger.normalizeScroll(true);
 
 timeline.from(".an1", {
     x:-1000,
